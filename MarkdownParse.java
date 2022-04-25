@@ -15,9 +15,18 @@ public class MarkdownParse {
             int openBracket = markdown.indexOf("[", currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
+            //if distance between bracket and parentheses is not 1, return 
+            //if bracket +1 is not parentheses, do not do the rest
             int closeParen = markdown.indexOf(")", openParen);
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
+            if (openBracket < 0 || closeBracket < 0 || openParen < 0 || 
+            closeParen < 0) {
+                break;
+            }
             currentIndex = closeParen + 1;
+            //if(openParen != closeBracket + 1){
+                //continue = test 5
+            //}
+            toReturn.add(markdown.substring(openParen + 1, closeParen));
             System.out.println(currentIndex);
         }
         return toReturn;
