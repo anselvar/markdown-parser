@@ -60,4 +60,10 @@ public class MarkdownParseTest {
         String content = Files.readString(fileName);
         assertEquals(MarkdownParse.getLinks(content), List.of("a link on the first line"));
     }
+    @Test
+    public void testLink9() throws IOException{
+        Path fileName = Path.of("test-file9.md");
+        String content = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(content), List.of());
+    }
 }
