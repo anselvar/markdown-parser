@@ -28,6 +28,36 @@ public class MarkdownParseTest {
     public void testLink3() throws IOException{
         Path fileName = Path.of("test-file3.md");
         String content = Files.readString(fileName);
-        assertEquals(MarkdownParse.getLinks(content), List.of("https://something.com", "some-page.html"));
+        assertEquals(MarkdownParse.getLinks(content), List.of());
+    }
+    @Test
+    public void testLink4() throws IOException{
+        Path fileName = Path.of("test-file4.md");
+        String content = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(content), List.of());
+    }
+    @Test
+    public void testLink5() throws IOException{
+        Path fileName = Path.of("test-file5.md");
+        String content = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(content), List.of());
+    }
+    @Test
+    public void testLink6() throws IOException{
+        Path fileName = Path.of("test-file6.md");
+        String content = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(content), List.of());
+    }
+    @Test
+    public void testLink7() throws IOException{
+        Path fileName = Path.of("test-file7.md");
+        String content = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(content), List.of());
+    }
+    @Test
+    public void testLink8() throws IOException{
+        Path fileName = Path.of("test-file8.md");
+        String content = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(content), List.of("a link on the first line"));
     }
 }
