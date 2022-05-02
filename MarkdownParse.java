@@ -32,7 +32,11 @@ public class MarkdownParse {
                     break;
             }
                 currentIndex = closeParen + 1;
-            
+            //handles cases where the brackets and parentheses are not right next
+            // to each other
+            if (closeBracket+1 != openParen){
+                continue;
+            }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
         }
 
