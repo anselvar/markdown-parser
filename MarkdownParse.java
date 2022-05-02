@@ -23,10 +23,11 @@ public class MarkdownParse {
                 currentIndex = closeParen +1;
                 continue;
             }
-            // if (exclamation >= currentIndex && exclamation < openBracket){
-            //     currentIndex = closeParen + 1;
-            //     continue;
-            // }
+            //handles cases where it tries to read images as a link
+            if (exclamation >= currentIndex && exclamation < openBracket){
+                currentIndex = closeParen + 1;
+                continue;
+            }
             if (openBracket == -1 || closeBracket == -1 ||
                 openParen == -1 || closeParen == -1){
                     break;
