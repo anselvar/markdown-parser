@@ -18,11 +18,11 @@ public class MarkdownParse {
             int closeParen = markdown.indexOf(")", openParen);
             int exclamation = markdown.indexOf("!", currentIndex);
             int innerParen = markdown.indexOf("(", openParen+1);
-            // if(innerParen > openParen && innerParen < closeParen){
-            //     closeParen++;
-            //     currentIndex = closeParen +1;
-            //     continue;
-            // }
+            if(innerParen > openParen && innerParen < closeParen){
+                closeParen++;
+                currentIndex = closeParen +1;
+                continue;
+            }
             //handles cases where it tries to read images as a link
             if (exclamation >= currentIndex && exclamation < openBracket){
                 currentIndex = closeParen + 1;
