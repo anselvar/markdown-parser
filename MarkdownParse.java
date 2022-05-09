@@ -33,7 +33,7 @@ public class MarkdownParse {
             }
         }
         if (toReturn.size() == 0) {
-            System.out.println("No links found");
+            System.out.println("Zero links found");
         }
         return toReturn;
     }
@@ -44,5 +44,6 @@ public class MarkdownParse {
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
 	    System.out.println(links);
+        //I made this change on ieng6
     }
 }
