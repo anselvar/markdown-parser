@@ -4,9 +4,10 @@ import org.junit.*;
 import java.nio.file.Files;
 import java.util.*;
 
-
+//I made this change remotely
 
 public class MarkdownParseTest {
+    private static final int two = 2;
     ArrayList<String> expectedlinks; //ArrayList utilized by tests 1, 2, 3, and 4
 
     @Before
@@ -27,7 +28,7 @@ public class MarkdownParseTest {
     */
     @Test
     public void testMarkdownParseFile1() {
-        Path filePath = Path.of("test-file1.md");
+        Path filePath = Path.of("/home/linux/ieng6/cs15lsp22/cs15lsp22afq/markdown-parser-fork/test-file.md");
 
         try {
             String fileContents = Files.readString(filePath);
@@ -47,7 +48,7 @@ public class MarkdownParseTest {
     */
     @Test
     public void testMarkdownParseFile2() {
-        Path filePath = Path.of("test-file2.md");
+        Path filePath = Path.of("/home/linux/ieng6/cs15lsp22/cs15lsp22afq/markdown-parser-fork/test-file2.md");
 
         try {
             String fileContents = Files.readString(filePath);
@@ -67,7 +68,7 @@ public class MarkdownParseTest {
     */
     @Test
     public void testMarkdownParseFile3() {
-        Path filePath = Path.of("test-file2.md");
+        Path filePath = Path.of("/home/linux/ieng6/cs15lsp22/cs15lsp22afq/markdown-parser-fork/test-file3.md");
 
         try {
             String fileContents = Files.readString(filePath);
@@ -87,7 +88,7 @@ public class MarkdownParseTest {
     */
     @Test
     public void testMarkdownParseFile4() {
-        Path filePath = Path.of("test-file4.md");
+        Path filePath = Path.of("/home/linux/ieng6/cs15lsp22/cs15lsp22afq/markdown-parser-fork/test-file4.md");
 
         try {
             String fileContents = Files.readString(filePath);
@@ -108,7 +109,7 @@ public class MarkdownParseTest {
     */
     @Test
     public void testMarkdownParseFile5() {
-        Path filePath = Path.of("test-file5.md");
+        Path filePath = Path.of("/home/linux/ieng6/cs15lsp22/cs15lsp22afq/markdown-parser-fork/test-file5.md");
 
         try {
             String fileContents = Files.readString(filePath);
@@ -126,7 +127,7 @@ public class MarkdownParseTest {
     */
     @Test
     public void testMarkdownParseFile6() {
-        Path filePath = Path.of("test-file6.md");
+        Path filePath = Path.of("/home/linux/ieng6/cs15lsp22/cs15lsp22afq/markdown-parser-fork/test-file6.md");
 
         try {
             String fileContents = Files.readString(filePath);
@@ -144,7 +145,7 @@ public class MarkdownParseTest {
     */
     @Test
     public void testMarkdownParseFile7() {
-        Path filePath = Path.of("test-file7.md");
+        Path filePath = Path.of("/home/linux/ieng6/cs15lsp22/cs15lsp22afq/markdown-parser-fork/test-file7.md");
 
         try {
             String fileContents = Files.readString(filePath);
@@ -162,7 +163,7 @@ public class MarkdownParseTest {
     */
     @Test
     public void testMarkdownParseFile8() {
-        Path filePath = Path.of("test-file8.md");
+        Path filePath = Path.of("/home/linux/ieng6/cs15lsp22/cs15lsp22afq/markdown-parser-fork/test-file8.md");
 
         try {
             String fileContents = Files.readString(filePath);
