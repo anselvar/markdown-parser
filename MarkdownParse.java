@@ -17,15 +17,30 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
 
+            int openQuote = markdown.indexOf("`", currentIndex);
+            int closeQuote =  markdown.indexOf("`", openQuote);
+            int closeIndex = Math.max(closeParen, closeQuote);
+
+
             if(openBracket == -1 || closeBracket == -1 || openParen == -1 || closeParen == -1){
                 break;
             }
-            if(markdown.charAt(openBracket - 1) == '!'){
+
+            if(openBracket > 0 && markdown.charAt(openBracket - 1) == '!'){
                 currentIndex = closeParen + 1;
             }
+            
+            
+            
             else{
-                toReturn.add(markdown.substring(openParen + 1, closeParen));
-                currentIndex = closeParen + 1;
+                System.out.println(openQuote);
+                System.out.println(openBracket);
+                System.out.println(markdown.substring(50,55));
+                System.out.println(markdown.substring(openParen + 1, closeParen));
+                if(openQuote == -1 || openQuote >= openBracket){
+                    toReturn.add(markdown.substring(openParen + 1, closeParen));
+                }
+                currentIndex = closeIndex + 1;
             }
         }
 
