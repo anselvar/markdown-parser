@@ -64,10 +64,7 @@ public class MarkdownParseTest {
         assertEquals(MarkdownParse.getLinks(contents), expect);
     }
     
-}
-    public void addition() {
-        assertEquals(2, 1 + 1);
-    }
+    
     @Test
     public void testLinks() throws IOException{
         Path fileName = Path.of("test-file.md");
